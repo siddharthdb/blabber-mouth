@@ -3,8 +3,13 @@ const mongoose = require('mongoose');
 const articleSchema = mongoose.Schema({
     title: String,
     content: String,
-    publishDate: String,
-    votes: Number
+    votes: Number,
+    comments: {
+        name: String,
+        email: String,
+        comment: String,
+        commentDate: Date
+    }
 }, {
     timestamps: true
 });

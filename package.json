@@ -6,7 +6,8 @@
     "scripts": {
         "server": "nodemon server/app.js",
         "ui:dev": "parcel index.html",
-        "start": "concurrently --kill-others \"npm run server\" \"npm run ui:dev\""
+        "start": "concurrently --kill-others \"npm run server\" \"npm run ui:dev\"",
+        "test": "jest"
     },
     "repository": {
         "type": "git",
@@ -21,7 +22,6 @@
     "dependencies": {
         "@material-ui/core": "^4.11.0",
         "@popperjs/core": "^2.4.4",
-        "@testing-library/jest-dom": "^4.2.4",
         "@testing-library/react": "^9.5.0",
         "@testing-library/user-event": "^7.2.1",
         "@types/jest": "^24.9.1",
@@ -45,7 +45,14 @@
         "typescript": "^3.7.5"
     },
     "devDependencies": {
+        "@babel/core": "^7.11.6",
+        "@babel/preset-env": "^7.11.5",
+        "@babel/preset-react": "^7.10.4",
+        "@babel/preset-typescript": "^7.10.4",
+        "@testing-library/jest-dom": "^4.2.4",
+        "babel-jest": "^26.3.0",
         "concurrently": "^5.3.0",
+        "jest": "^26.4.2",
         "nodemon": "^2.0.4",
         "parcel-bundler": "^1.12.4",
         "sass": "^1.26.11"
