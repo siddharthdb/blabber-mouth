@@ -10,7 +10,8 @@
         "start:debug": "concurrently --kill-others \"npm run server\" \"npm run ui:dev\"",
         "start": "npm run server",
         "test": "jest",
-        "prettier": "npx prettier --write \"./**/*.tsx\""
+        "prettier": "npx prettier --write \"./**/*.tsx\"",
+        "heroku-postbuild": "npm run ui:build"
     },
     "repository": {
         "type": "git",
