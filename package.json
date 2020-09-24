@@ -9,7 +9,7 @@
         "start": "node server/app.js",
         "test": "jest",
         "prettier": "npx prettier --write \"./**/*.tsx\"",
-        "heroku-postbuild": "npm run ui:build"
+        "heroku-postbuild": "npm install && npm run build"
     },
     "repository": {
         "type": "git",
