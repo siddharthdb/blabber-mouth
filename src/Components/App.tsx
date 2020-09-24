@@ -17,7 +17,7 @@ class App extends React.Component<{}, {}> {
         <Switch>
           <Route path="/" component={Home} exact></Route>
           <Route path="/about" component={About}></Route>
-          <Route path="/articles" component={ArticleList}></Route>
+          <Route path="/articleslist" component={ArticleList}></Route>
           <Route path="/articlepage/:name" component={ArticlePage}></Route>
           <Route path="/contactus" component={ContactUs}></Route>
         </Switch>
