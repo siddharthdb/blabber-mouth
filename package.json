@@ -2,13 +2,11 @@
     "name": "blabber-mouth",
     "version": "1.0.0",
     "description": "A personal blogger site",
-    "main": "index.js",
+    "main": "app.js",
     "scripts": {
-        "server": "nodemon server/app.js",
-        "ui:dev": "parcel index.html",
-        "ui:build": "parcel build index.html",
-        "start:debug": "concurrently --kill-others \"npm run server\" \"npm run ui:dev\"",
-        "start": "npm run server",
+        "build": "parcel build index.html",
+        "start:debug": "concurrently --kill-others \"nodemon server/app.js\" \"parcel index.html\"",
+        "start": "node server/app.js",
         "test": "jest",
         "prettier": "npx prettier --write \"./**/*.tsx\"",
         "heroku-postbuild": "npm run ui:build"
