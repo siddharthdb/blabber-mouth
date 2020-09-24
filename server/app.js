@@ -1,5 +1,6 @@
 const express = require("express");
 const bodyParser = require("body-parser");
+const path = require('path');
 const cors = require("cors");
 const mongoose = require('mongoose');
 
@@ -28,6 +29,12 @@ connection.once('open', () => {
 
 //routes
 app.use(articleRoutes);
+
+//serve the website
+app.use(express.static(path.join(__dirname, '../dist')))
+app.get('*', (req, res) => {
+    res.sendFile(path.join(__dirname, '../dist'))
+})
 
 console.log(`Server running on Port ${PORT || 3000}`);
 app.listen(PORT || 3000)

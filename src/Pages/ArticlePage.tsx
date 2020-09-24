@@ -1,12 +1,7 @@
-import React from 'react';
+import React from "react";
 
 export const ArticlePage = (props: any) => {
-    const name = props.match.params.name;
+  const name = props.match.params.name;
 
-    return (
-        <div> 
-            Article - {name}
-        </div>
-    )
-}
-
+  return <div>Article - {name}</div>;
+};

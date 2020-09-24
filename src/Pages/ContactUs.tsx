@@ -1,10 +1,9 @@
-import React from 'react';
+import React from "react";
 
 export const ContactUs = () => {
-
-    return (
-        <>
-            <div>Contact Us at Blabber Mouth</div>
-        </>
-    )
-}
+  return (
+    <>
+      <div>Contact Us at Blabber Mouth</div>
+    </>
+  );
+};

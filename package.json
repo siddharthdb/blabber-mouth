@@ -6,8 +6,11 @@
     "scripts": {
         "server": "nodemon server/app.js",
         "ui:dev": "parcel index.html",
-        "start": "concurrently --kill-others \"npm run server\" \"npm run ui:dev\"",
-        "test": "jest"
+        "ui:build": "parcel build index.html",
+        "start:debug": "concurrently --kill-others \"npm run server\" \"npm run ui:dev\"",
+        "start": "npm run server",
+        "test": "jest",
+        "prettier": "npx prettier --write \"./**/*.tsx\""
     },
     "repository": {
         "type": "git",
@@ -55,6 +58,8 @@
         "jest": "^26.4.2",
         "nodemon": "^2.0.4",
         "parcel-bundler": "^1.12.4",
+        "prettier": "^2.1.2",
         "sass": "^1.26.11"
-    }
+    },
+    "proxy": "http://localhost:5000"
 }
